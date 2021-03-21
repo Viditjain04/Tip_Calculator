@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/cost_of_service"
+        android:layout_width="160dp"
+        android:maxLength="10"
+        android:layout_marginBottom="7dp"
+        android:layout_height="wrap_content"
+        android:hint="Cost of Service"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/service_question"
+        android:layout_width="wrap_content"
+        android:textColor="#09011B"
+        android:textSize="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_height="wrap_content"
+        android:text="How was the service?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cost_of_service" />
+
+    <RadioGroup
+        android:id="@+id/tip_option"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/option20"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/service_question">
+        <!-- radioButtons here -->
+        <RadioButton
+            android:id="@+id/option20"
+            android:textColor="#FF5722"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/a20" />
+
+        <RadioButton
+            android:id="@+id/option18"
+            android:textColor="#9C27B0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/g18" />
+
+        <RadioButton
+            android:id="@+id/option15"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/o15" />
+
+
+        >
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/round_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_marginLeft="7dp"
+        android:textColor="#03A9F4"
+        android:text="@string/sw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/tip_option" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_marginTop="4dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="#110727"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/round_up"></Button>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_amount"
+        android:textColor="#232217"
+        android:layout_marginTop="4dp"
+        android:textSize="17dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
